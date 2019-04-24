@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title> Francisca López de Heredia</title>
   </head>
   <body>
     <div class="container">
@@ -31,36 +31,39 @@
   $.getJSON('https://api.myjson.com/bins/10o8ao', function(data) {
   console.log(data);
 
-  var condicional;
+var condicional;
 
-  var enSegundo = 0;
-  var enTercero = 0;
-  var enCuarto = 0;
-  var enQuinto = 0;
+var enSegundo = 0;
+var enTercero= 0;
+var enCuarto = 0;
+var enQuinto =0;
 
   for(var x = 0; x < 20; x++){
 
-    if(data[x].nombre == "Francisca Kegevic") {
-      condicional = " año de Ingeniería Comercial</p>"
+    if (data[x].nombre == "Francisca Kegevic") {
+      condicional = "año de Ingeniería Comercial</p>"
     } else {
-      condicional = " año de Diseño</p>"
+      condicional = "año de Diseño </p>"
     }
+
   $("#contenidos").append("<p>" + data[x].nombre + " está en " + data[x].curso + condicional);
 
-  if (data[x].curso == "Segundo"){
+  if(data[x].curso=="segundo"){
     enSegundo = enSegundo + 1;
-  } else if (data[x].curso == "tercero"){
+  } else if(data[x].curso =="tercero"){
     enTercero = enTercero + 1;
-  } else if (data[x].curso == "cuarto"){
+  }else if (data[x].curso =="cuarto"){
     enCuarto = enCuarto + 1;
-  } else if (data[x].curso == "quinto"){
+  }else if (data[x].curso =="quinto"){  
     enQuinto = enQuinto + 1;
-}
+  }
+  
 }
 
- $("#totales").append("<h4> En segundo hay " + enSegundo + ", en tercero hay " + enTercero + ", en cuarto hay " + enCuarto + " y en quinto hay " +enQuinto + ".</h4>")
+$("#totales").append("<h4> En segundo hay "+ enSegundo +", en tercero hay "+ enTercero +", en cuarto hay "+ enCuarto +" y en quinto hay "+ enQuinto +".</h4>");
 
 });
+
 </script>
   </body>
 </html>
